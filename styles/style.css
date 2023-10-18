@@ -347,7 +347,7 @@ nav ul a {
     font-size: 0.7rem;
     margin-bottom: 50px;
     text-indent: 40px;
-    width: 500px;
+    max-width: 500px;
 }
 
 .hero__btn button{
@@ -526,4 +526,53 @@ nav ul a {
 
 .footer__nav ul li a:hover{
     color: #fff;
+}
+
+@media screen and (max-width: 1450px) {
+    .navegation.active ~ ul{
+        grid-template-columns: repeat( auto-fit, minmax(250px, 1fr) );
+    }
+
+    .head__nav ul li img{
+        width: 200px;
+        height: 200px;
+    }
+    
+}
+
+@media screen and (max-width: 1000px) {
+    .navegation.active ~ ul{
+        grid-template-columns: repeat( auto-fit, minmax(500px, 2fr) );
+    }
+
+    .head__nav ul li img{
+        width: 200px;
+        height: 200px;
+    }
+    
+    main{
+        width: 100%;
+        position: relative;
+    }
+
+    .hero__texto h2{
+        font-size: 2.5rem;
+        margin: 0;
+        margin-bottom: 20px;
+        text-transform: uppercase;
+        line-height: 5rem;
+        letter-spacing: 2px;
+        width: 600px;
+    }
+
+    .hero__video{
+        object-fit: none;
+        position: relative;
+    }
+
+    section{
+        width: 100%;
+    }
+
+    
 }
